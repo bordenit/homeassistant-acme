@@ -22,6 +22,6 @@ while true
     ./acme.sh --install --create-account-key -m "${EMAIL}"
     ./acme.sh --set-default-ca --server zerossl
     ./acme.sh --register-account -m "${EMAIL}"
-    ./acme.sh --key-file "/acmessl/key.pem" --cert-file "/acmessl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
+    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
      sleep 1D
   done
