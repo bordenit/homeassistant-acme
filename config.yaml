@@ -1,0 +1,22 @@
+name: "Wrapper using ACME.sh"
+description: "Wrapping ACME.sh in a docker container. Overengineered and only needed, because we can't run a shell script for longer than 1 minute now."
+version: "1.0.0"
+slug: "wrapper_acme_sh"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  acme_api_key: !secret acme_api_key
+  acme_api_secret: !secret acme_api_secret
+  acme_dnsapi: !secret acme_dnsapi
+  acme_domain: !secret acme_domain
+schema:
+  acme_api_key: str
+  acme_api_secret: int
+  acme_dnsapi: str
+  acme_domain: str
+  
