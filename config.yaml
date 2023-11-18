@@ -10,10 +10,10 @@ arch:
   - armv7
   - i386
 options:
-  acme_api_key: !secret acme_api_key
-  acme_api_secret: !secret acme_api_secret
-  acme_dnsapi: !secret acme_dnsapi
-  acme_domain: !secret acme_domain
+  acme_api_key: ''
+  acme_api_secret: ''
+  acme_dnsapi: ''
+  acme_domain: ''
 schema:
   acme_api_key: str
   acme_api_secret: int
