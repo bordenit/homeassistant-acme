@@ -8,6 +8,8 @@ DOMAIN=$(bashio::config 'acme_domain')
 apk add openssl
 apk add socat
 apk add git
+apk add curl
+apk add wget
 
 while true
   do
