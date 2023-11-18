@@ -7,16 +7,19 @@ DOMAIN=$(bashio::config 'acme_domain')
 
 apk add openssl
 apk add socat
+apk add git
 
-export GD_Key="${API_KEY}"
-export GD_Secret="${API_SECRET}"
-
-rm -rf acme.sh
-rm -rf /root/.acme.sh
-git clone "https://github.com/acmesh-official/acme.sh.git"
-cd acme.sh
-./acme.sh --install --create-account-key -m "${EMAIL}"
-#./acme.sh --set-default-ca --server letsencrypt 
-./acme.sh --set-default-ca --server zerossl
-./acme.sh --register-account -m "${EMAIL}"
-./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${ACME_DOMAIN}"
+while true
+  do
+    export GD_Key="${API_KEY}"
+    export GD_Secret="${API_SECRET}"
+    rm -rf acme.sh
+    rm -rf /root/.acme.sh
+    git clone "https://github.com/acmesh-official/acme.sh.git"
+    cd acme.sh
+    ./acme.sh --install --create-account-key -m "${EMAIL}"
+    ./acme.sh --set-default-ca --server zerossl
+    ./acme.sh --register-account -m "${EMAIL}"
+    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${ACME_DOMAIN}"
+     sleep 1D
+  done
