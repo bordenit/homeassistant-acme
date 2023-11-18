@@ -1,6 +1,6 @@
 name: "homeassistant-acme"
 description: "Wrapping ACME.sh in a docker container. Overengineered and only needed, because we can't run a shell script for longer than 1 minute now."
-version: "1.0.7"
+version: "1.0.8"
 slug: "homeassistant-acme"
 init: false
 arch:
@@ -9,6 +9,8 @@ arch:
   - armhf
   - armv7
   - i386
+map:
+  - ssl
 options:
   acme_email: ''
   acme_api_key: ''
