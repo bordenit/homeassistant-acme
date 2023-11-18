@@ -16,7 +16,7 @@ options:
   acme_domain: ''
 schema:
   acme_api_key: str
-  acme_api_secret: int
+  acme_api_secret: str
   acme_dnsapi: str
   acme_domain: str
   
