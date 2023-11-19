@@ -5,9 +5,9 @@ DNSAPI=$(bashio::config 'acme_dnsapi')
 EMAIL=$(bashio::config 'acme_email')
 DOMAIN=$(bashio::config 'acme_domain')
 ISSUER=$(bashio::config 'acme_issuer')
-GD_Key="${API_KEY}"
-GD_Secret="${API_SECRET}"
-LE_WORKING_DIR=/ssl/acme
+export GD_Key="${API_KEY}"
+export GD_Secret="${API_SECRET}"
+export LE_WORKING_DIR=/ssl/acme
 mkdir -p /ssl/acme
 git clone "https://github.com/acmesh-official/acme.sh.git"
 cd acme.sh
