@@ -1,6 +1,6 @@
 name: "homeassistant-acme"
 description: "A docker container to renew cert with acme and godaddy"
-version: "1.13.0"
+version: "1.14.0"
 slug: "homeassistant-acme"
 init: false
 arch:
