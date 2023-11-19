@@ -4,7 +4,7 @@ API_SECRET=$(bashio::config 'acme_api_secret')
 DNSAPI=$(bashio::config 'acme_dnsapi')
 EMAIL=$(bashio::config 'acme_email')
 DOMAIN=$(bashio::config 'acme_domain')
-
+LE_WORKING_DIR="/acme"
 apk add openssl
 apk add socat
 apk add git
