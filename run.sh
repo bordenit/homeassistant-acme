@@ -4,6 +4,7 @@ API_SECRET=$(bashio::config 'acme_api_secret')
 DNSAPI=$(bashio::config 'acme_dnsapi')
 EMAIL=$(bashio::config 'acme_email')
 DOMAIN=$(bashio::config 'acme_domain')
+ISSUER=$(bashio::config 'acme_issuer')
 GD_Key="${API_KEY}"
 GD_Secret="${API_SECRET}"
 
@@ -16,7 +17,7 @@ apk add wget
 git clone "https://github.com/acmesh-official/acme.sh.git"
 cd acme.sh
 ./acme.sh --install --create-account-key -m "${EMAIL}"
-./acme.sh --set-default-ca --server zerossl
+./acme.sh --set-default-ca --server "${ISSUER}"
 ./acme.sh --register-account -m "${EMAIL}"
 while true
   do
