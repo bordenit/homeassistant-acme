@@ -11,6 +11,7 @@ arch:
   - i386
 map:
   - ssl:rw
+  - acme:rw
 options:
   acme_email: ''
   acme_api_key: ''
