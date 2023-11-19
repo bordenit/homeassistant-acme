@@ -4,13 +4,14 @@ API_SECRET=$(bashio::config 'acme_api_secret')
 DNSAPI=$(bashio::config 'acme_dnsapi')
 EMAIL=$(bashio::config 'acme_email')
 DOMAIN=$(bashio::config 'acme_domain')
-LE_WORKING_DIR="/acme"
+LE_WORKING_DIR="/share/acme
 apk add openssl
 apk add socat
 apk add git
 apk add curl
 apk add wget
 
+mkdir -p /share/acme
 while true
   do
     export GD_Key="${API_KEY}"
