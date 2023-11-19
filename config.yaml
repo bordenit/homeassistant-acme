@@ -1,5 +1,5 @@
 name: "homeassistant-acme"
-description: "Wrapping ACME.sh in a docker container. Overengineered and only needed, because we can't run a shell script for longer than 1 minute now."
+description: "A docker container to renew cert with acme.sh and godaddy"
 version: "1.3.0"
 slug: "homeassistant-acme"
 init: false
