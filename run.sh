@@ -20,6 +20,7 @@ git clone "https://github.com/acmesh-official/acme.sh.git"
 ./acme.sh/acme.sh --register-account -m "${EMAIL}"
 while true
   do
+    ./acme.sh/acme.sh --upgrade
     ./acme.sh/acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
      sleep 30d
   done
