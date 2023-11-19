@@ -7,7 +7,8 @@ DOMAIN=$(bashio::config 'acme_domain')
 ISSUER=$(bashio::config 'acme_issuer')
 GD_Key="${API_KEY}"
 GD_Secret="${API_SECRET}"
-
+LE_WORKING_DIR=/ssl/acme
+mkdir -p /ssl/acme
 git clone "https://github.com/acmesh-official/acme.sh.git"
 cd acme.sh
 ./acme.sh --install --create-account-key -m "${EMAIL}"
