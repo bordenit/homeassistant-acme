@@ -16,6 +16,6 @@ cd acme.sh
 ./acme.sh --register-account -m "${EMAIL}"
 while true
   do
-    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug --dnssleep 60
+    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" 2> /dev/null
      sleep 24h
   done
