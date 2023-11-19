@@ -14,13 +14,12 @@ apk add curl
 apk add wget
 
 git clone "https://github.com/acmesh-official/acme.sh.git"
-cd acme.sh
-./acme.sh --install --create-account-key -m "${EMAIL}"
-./acme.sh --set-default-ca --server zerossl
-./acme.sh --register-account -m "${EMAIL}"
-cd acme.sh
+./acme.sh/acme.sh
+./acme.sh/acme.sh --install --create-account-key -m "${EMAIL}"
+./acme.sh/acme.sh --set-default-ca --server zerossl
+./acme.sh/acme.sh --register-account -m "${EMAIL}"
 while true
   do
-    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
+    ./acme.sh/acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
      sleep 30d
   done
