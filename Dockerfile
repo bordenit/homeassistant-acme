@@ -1,11 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-apk add openssl
-apk add socat
-apk add git
-apk add curl
-apk add wget
+RUN apk add openssl socat git curl wget
 
 # Copy data for add-on
 COPY run.sh /
