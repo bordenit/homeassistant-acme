@@ -11,7 +11,7 @@ apk add git
 apk add curl
 apk add wget
 
-mkdir -p /share/acme
+mkdir -p /ssl/acme
 while true
   do
     export GD_Key="${API_KEY}"
