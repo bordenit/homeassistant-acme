@@ -8,14 +8,6 @@ ISSUER=$(bashio::config 'acme_issuer')
 GD_Key="${API_KEY}"
 GD_Secret="${API_SECRET}"
 
-apk add openssl
-apk add socat
-apk add git
-apk add curl
-apk add wget
-
-rm -rf acme.sh
-rm -rf /root/.acme.sh
 git clone "https://github.com/acmesh-official/acme.sh.git"
 cd acme.sh
 ./acme.sh --install --create-account-key -m "${EMAIL}"
@@ -23,6 +15,6 @@ cd acme.sh
 ./acme.sh --register-account -m "${EMAIL}"
 while true
   do
-    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
+    ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug --dnssleep 60
      sleep 24h
   done
