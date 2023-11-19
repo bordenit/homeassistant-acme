@@ -17,10 +17,12 @@ options:
   acme_api_secret: ''
   acme_dnsapi: ''
   acme_domain: ''
+  acme_issuer: zerossl
 schema:
   acme_email: str
   acme_api_key: password
   acme_api_secret: password
   acme_dnsapi: str
   acme_domain: str
+  acme_issuer: str
   
