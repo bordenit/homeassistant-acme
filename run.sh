@@ -14,6 +14,8 @@ apk add git
 apk add curl
 apk add wget
 
+rm -rf acme.sh
+rm -rf /root/.acme.sh
 git clone "https://github.com/acmesh-official/acme.sh.git"
 cd acme.sh
 ./acme.sh --install --create-account-key -m "${EMAIL}"
@@ -22,5 +24,5 @@ cd acme.sh
 while true
   do
     ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue --dns "${DNSAPI}" -d "${DOMAIN}" --debug
-     sleep 30d
+     sleep 24h
   done
