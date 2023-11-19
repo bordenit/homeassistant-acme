@@ -1,5 +1,5 @@
 name: "homeassistant-acme-sh"
-description: "A docker container to renew cert with acme.sh and godaddy"
+description: "A docker container to renew cert with acme and godaddy"
 version: "1.5.0"
 slug: "homeassistant-acme-sh"
 init: false
@@ -11,7 +11,7 @@ arch:
   - i386
 map:
   - ssl:rw
-  - acme:rw
+  - share
 options:
   acme_email: ''
   acme_api_key: ''
