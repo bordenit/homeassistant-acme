@@ -20,7 +20,6 @@ function issue {
     ./acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --issue -d ${DOMAIN} --dns ${DNSAPI} || { ret=$?; [ $ret -eq ${RENEW_SKIP} ] && return 0 || return $ret ;}
 }
 
-issue
 while true
   do
      issue
