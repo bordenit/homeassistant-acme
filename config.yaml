@@ -13,16 +13,20 @@ map:
   - ssl:rw
 options:
   acme_email: ''
-  acme_api_key: ''
-  acme_api_secret: ''
-  acme_dnsapi: ''
+  acme_gd_key: ''
+  acme_gd_secret: ''
+  acme_cf_zone_id: ''
+  acme_cf_token: ''
+  acme_dns_provider: ''
   acme_domain: ''
   acme_issuer: zerossl
 schema:
   acme_email: str
   acme_api_key: password
   acme_api_secret: password
-  acme_dnsapi: str
+  acme_cf_token: password
+  acme_cf_zone_id: str
+  acme_dns_provder: str
   acme_domain: str
   acme_issuer: str
   
