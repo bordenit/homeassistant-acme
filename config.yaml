@@ -22,8 +22,8 @@ options:
   acme_issuer: zerossl
 schema:
   acme_email: str
-  acme_api_key: password
-  acme_api_secret: password
+  acme_gd_key: password
+  acme_gd_secret: password
   acme_cf_token: password
   acme_cf_zone_id: str
   acme_dns_provder: str
