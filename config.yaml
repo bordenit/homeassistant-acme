@@ -1,6 +1,6 @@
 name: "homeassistant-acme"
 description: "A docker container to renew cert with acme and godaddy"
-version: "1.19.0"
+version: "1.20.0"
 slug: "homeassistant-acme"
 init: false
 arch:
@@ -26,7 +26,7 @@ schema:
   acme_gd_secret: password
   acme_cf_token: password
   acme_cf_zone_id: str
-  acme_dns_provder: str
+  acme_dns_provider: str
   acme_domain: str
   acme_issuer: str
   
