@@ -15,6 +15,7 @@ export GD_Secret="${GD_SECRET}"
 #If using Cloudfare
 export CF_Token="${CF_TOKEN}"
 export CF_Zone_ID="${CF_ZONE_ID}"
+export MAX_RETRY_TIMES=90
 
 #Certificate directory
 export LE_WORKING_DIR=/ssl/acme
