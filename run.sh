@@ -29,7 +29,7 @@ git clone "https://github.com/acmesh-official/acme.sh.git"
 
 function issue {
     local RENEW_SKIP=2
-    ./acme.sh/acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --full-chain "/ssl/certchain.pem" --issue -d ${DOMAIN} --dns ${DNS_PROVIDER} || { ret=$?; [ $ret -eq ${RENEW_SKIP} ] && return 0 || return $ret ;}
+    ./acme.sh/acme.sh --key-file "/ssl/key.pem" --cert-file "/ssl/cert.pem" --fullchain-file "/ssl/certchain.pem" --issue -d ${DOMAIN} --dns ${DNS_PROVIDER} || { ret=$?; [ $ret -eq ${RENEW_SKIP} ] && return 0 || return $ret ;}
 }
 
 while true
