@@ -1,1 +1,1 @@
-# Currently supports GoDaddy and Cloudfare
+# Currently supports GoDaddy and Cloudflare
